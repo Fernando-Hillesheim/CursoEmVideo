@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Day Time</h1>
+    </header>
+    <section class="time_container">
+        <div id="time_info">Now it's 9:00</div>
+        <img src="Images/morning.jpg" alt="" id="time_picture">
+        <div id="time_greeting">Good Morning!</div>
+    </section>
+    <footer class="main_footer">
+        @Fernando Hillesheim
+    </footer>
+
+    <script>
+        
+        function timePage() {
+            let date = new Date()
+            // let hour = date.getHours()
+            let minutes = date.getMinutes()
+            minutes = String(minutes).padStart(2, '0');
+            let hour = 19
+            
+            let time_info = document.getElementById('time_info')
+            time_info.innerText = `Now it\'s ${hour}:${minutes}`
+            
+            if(hour >= 6 && hour < 12) {
+                showMorning()
+            } else if(hour < 18) {
+                console.log('OK Normal');
+                showAfternoon()
+            } else {
+                showNight()
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', timePage());
+        function showMorning() {
+            let backgroud = document.getElementsByTagName('body')[0]
+            backgroud.style.backgroud = 'sandybrown'
+
+            let time_info = document.querySelector('#time_info')
+            time_info.style.background = 'sandybrown'
+
+            let time_greeting = document.querySelector('#time_greeting')
+            time_greeting.innerText = 'Good Morning!'
+            time_greeting.style.background = 'sandybrown'
+
+            let time_picture = document.getElementById('time_picture')
+            time_picture.src = 'Images/morning.jpg'; 
+            time_picture.alt = 'Morning picture'; 
+
+            let footer = document.getElementsByClassName('main_footer')[0]
+            footer.style.color = 'black'            
+        }
+
+        function showAfternoon() {
+            let body = document.body
+            body.style.background = 'lightblue'
+
+            let time_info = document.querySelector('#time_info')
+            time_info.style.background = 'lightblue'
+
+            let time_greeting = document.querySelector('#time_greeting')
+            time_greeting.innerText = 'Good Afternoon!'
+            time_greeting.style.background = 'lightblue'
+
+            let time_picture = document.getElementById('time_picture')
+            time_picture.src = 'Images/afternoon.jpg'; 
+            time_picture.alt = 'Afternoon picture'; 
+
+            let footer = document.getElementsByClassName('main_footer')[0]
+            footer.style.color = 'black'
+        }
+
+        function showNight() {
+            let backgroud = document.body
+            backgroud.style.background = 'darkslateblue'
+
+            let time_info = document.querySelector('#time_info')
+            time_info.style.background = 'darkslateblue'
+            time_info.style.color = 'white'
+
+            let time_greeting = document.querySelector('#time_greeting')
+            time_greeting.innerText = 'Good Night!'
+            time_greeting.style.background = 'darkslateblue'
+            time_greeting.style.color = 'white'
+
+            let time_picture = document.getElementById('time_picture')
+            time_picture.src = 'Images/night.jpg'; 
+            time_picture.alt = 'Night picture'; 
+
+            let footer = document.getElementsByClassName('main_footer')[0]
+            footer.style.color = 'white'
+        }
+    </script>
+</body>
+</html>

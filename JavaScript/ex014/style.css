@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 62,5%; /*1rem = 10px*/
+}
+body{
+    background-color: sandybrown;
+}
+header {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+section{
+    background-color: white;
+    width: 30rem;
+    height: 30rem;
+    margin: 0 auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#time_info{
+    padding: 0rem 0.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background-color: sandybrown;
+    border-radius: 30px;
+}
+#time_picture {
+    width: 100%;
+    border-radius: 50%;
+    width: 18rem;
+    height: 18rem;
+    object-fit: cover;
+}
+#time_greeting {
+    padding: 0 0.5rem;
+    margin: 1rem;
+    background-color: sandybrown;
+    font-size: 2rem;
+    border-radius: 30px;
+}
+footer {
+    text-align: center;
+    color: black;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
