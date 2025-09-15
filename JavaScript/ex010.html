@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Monitor</title>
+    <style>
+        #txtspeed {
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Speed Checker</h1>
+    Your speed: <input type="number" name="txtspeed" id="txtspeed"> Km/h 
+    <div id="anwser">You will be fined: </div>
+    <button id="checkSpeed" onclick="checkSpeed()">Verify</button>
+    
+    <script>
+        function checkSpeed(){
+            let speed = Number((document.getElementById('txtspeed')).value)
+            let anwser = document.getElementById('anwser')
+            if(speed > 60){
+                anwser.innerHTML = 'You will be fined: <strong><span style="color: red;">YES</span></strong>'
+            } else {
+                anwser.innerHTML = 'You will be fined: <strong><span style="color: green;">NO</span></strong>'
+            }
+        }
+    </script>
+</body>
+</html>

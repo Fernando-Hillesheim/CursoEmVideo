@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding numbers</title>
+</head>
+<body>
+    <h1>Adding Numbers</h1>
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+    <button id="add_button" onclick="addNumbers('txtn1', 'txtn2', 'result')">ADD</button>
+    <div id="result" style="margin-top: 20px;">
+        The sum is
+    </div>
+
+    <script>
+        function addNumbers(txtn1Id, txtn2Id, resultId) {
+            let n1 = Number(document.getElementById(txtn1Id).value)
+            let n2 = Number(document.getElementById(txtn2Id).value)
+            let sum = n1 + n2
+            let result = document.getElementById(resultId)
+            result.innerHTML = `The sum is <strong>${sum}</strong>`
+        }
+    </script>
+</body>
+</html>

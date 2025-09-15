@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area {
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        div#area2 {
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="mClick(this)" onmouseenter="mIn(this)" onmouseout="mOut(this)">
+        Interact
+    </div>
+    <br>
+    <div id="area2">
+        Box 2
+    </div>
+
+    <script>
+        // function mClick() {
+        //     var area = document.querySelector('div#area')
+        //     // var area = document.getElementById('area')
+        //     area.innerText = 'You clicked!'
+        //     area.style.background = 'red'
+        // }
+
+        // function mIn() {
+        //     var area = document.querySelector('div#area')
+        //     area.innerText = 'In the box'
+        // }
+
+        // function mOut() {
+        //     var area = document.querySelector('div#area')
+        //     area.innerText = 'Out the box'
+        //     area.style.background = 'green'
+        // }
+
+        function mClick(element) {
+            element.innerText = 'You clicked!'
+            element.style.background = 'red'
+        }
+
+        function mIn(element) {
+            element.innerText = 'In the box'
+        }
+
+        function mOut(element) {
+            element.innerText = 'Out the box'
+            element.style.background = 'green'
+        }
+
+        //other aproach to not pollut html
+        var a2 = document.querySelector('div#area2')
+        a2.addEventListener('click', () => mClick(a2))
+        a2.addEventListener('mouseenter', () => mIn(a2))
+        a2.addEventListener('mouseout', () => mOut(a2))
+    </script>
+</body>
+</html>

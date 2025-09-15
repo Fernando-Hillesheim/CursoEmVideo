@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Starting JS studies</h1>
+    <p>A simple paragraph</p>
+    <p id="ph2">Another paragraph</p>
+    <div>some div element</div>
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write(p1.innerText + '<br>')
+        var paragraphs = window.document.getElementsByTagName('p')
+        window.document.write(paragraphs[1].innerText + '<br>')
+        paragraphs[1].style.color = 'blue'
+        var p2 = document.getElementById('ph2')
+        // alert(p2.innerText)
+        var p2 = document.querySelector('p#ph2')
+        p2.style.color = 'white'
+        p2.style.background = 'black'
+        document.write(p2.innerText)
+    </script>
+</body>
+</html>

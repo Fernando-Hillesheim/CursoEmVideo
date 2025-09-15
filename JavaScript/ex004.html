@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name = window.prompt('What\'s your name?')
+        document.write(`Hello <strong>${name}</strong>, your name has ${name.length} letters!<br>`)
+        document.write(`Your name in uppercase is ${name.toUpperCase()} and in lower case is ${name.toLowerCase()}<br>`)
+
+        //short tip about currencies
+        var money = Number(window.prompt('What\'s your salary?'))
+        // money = money.toFixed(2) // do not use if you are going to use toLocateString
+        let BRL_money = money.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        document.write('Your salary in BRL is ' + BRL_money + '<br>')
+        let USD_money = money.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})
+        document.write('Your salary in USD is ' + USD_money + '<br>')
+        let EUR_money = money.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})
+        document.write('Your salary in EUR is ' + EUR_money + '<br>')
+
+    </script>
+</body>
+</html>

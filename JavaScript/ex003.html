@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>Random text</p>
+
+    <script>
+        //forcing a type for numbers
+        var n1 = Number.parseInt(window.prompt('Type a number:'))
+        var n2 = Number.parseInt(window.prompt('Type another number:'))
+        var sum = n1 + n2
+        window.alert('The sum of both numbers is ' + sum + '!')
+
+        //letting JS decide the number type
+        var n3 = Number(window.prompt('Type a number:'))
+        var n4 = Number(window.prompt('Type another number:'))
+        var sum2 = n3 + n4
+        window.alert(`The sum of both numbers is ${sum2}!`) //using template string
+    </script>
+</body>
+</html>
